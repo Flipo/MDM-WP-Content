@@ -1,0 +1,303 @@
+.category-list {
+
+	ul {
+		list-style: none !important;
+		padding: 0;
+		margin: 0;
+
+		li {
+			margin-bottom: .25em;
+			position: relative;
+
+			&.current-cat {
+				a {
+					color: $text-color;
+				}
+			}
+		}
+	}
+}
+
+
+.crp_related {
+	padding-top: 1em;
+
+	ul {
+		list-style: none !important;
+		padding: 0;
+		margin: 0;
+
+		li {
+			margin-bottom: 2em;
+			position: relative;
+
+			a {
+				display: block;
+				position: relative;
+
+				img {
+					max-width: 40px;
+				}
+			}
+
+			.crp_title {
+				position: absolute;
+				left: 50px;
+				top: 16px;
+				font-size: .875em;
+				line-height: 1.3em;
+				margin: 0;
+			}
+
+			.crp_date {
+				position: absolute;
+				left: 50px;
+				top: 0;
+				font-size: .75em;
+				line-height: 1em;
+			}
+		}
+
+
+	}
+}
+
+.pagination {
+	position: relative;
+	margin-left: 15px;
+	margin-right: 15px;
+	padding: 1em 0;
+
+	&:before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		content: '';
+		background: url(../img/pattern2x.png) repeat-x;
+		background-size: 4px 4px;
+		height: 4px;
+		width: 100%;
+	}
+
+}
+
+
+.nav-links {
+	position: relative;
+	margin-left: 15px;
+	margin-right: 15px;
+	padding: 1em 0 0;
+	height: auto;
+
+	@media (min-width: $screen-sm-min) {
+		height: 140px;
+		padding: 1em 0;
+	}
+
+	&:before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		content: '';
+		background: url(../img/pattern2x.png) repeat-x;
+		background-size: 4px 4px;
+		height: 4px;
+		width: 100%;
+	}
+
+	> div {
+		float: none;
+		width: auto;
+		position: relative;
+
+		@media (min-width: $screen-sm-min) {
+			float: left;
+			width: 300px;
+		}
+
+		span {
+			display: block;
+			margin-bottom: 1.25em;
+		}
+
+		a {
+			display: block;
+			width: 100%;
+		}
+
+		img {
+			position: relative;
+		}
+
+		p {
+			position: absolute;
+			left: 60px;
+			top: 3.85em;
+			font-weight: normal;
+			line-height: 1.3em;
+			font-weight: bold;
+		}
+
+		em {
+			position: absolute;
+			display: block;
+			top: 2.75em;
+			font-style: normal;
+			font-size: .875em;
+			left: 60px;
+			color: $text-color;
+		}
+
+	}
+
+	.prev-link {
+		float: none;
+		margin-bottom: 2em;
+
+		@media (min-width: $screen-sm-min) {
+			float: left;
+			margin-bottom: 0;
+		}
+
+	}
+
+	.next-link {
+		float: none;
+
+
+		@media (min-width: $screen-sm-min) {
+			float: right;
+
+			span {
+				text-align: right;
+			}
+
+			img {
+				right: 0;
+				position: absolute;
+			}
+
+			p {
+				left: 0;
+				right: 60px;
+				text-align: right;
+			}
+
+			em {
+				position: absolute;
+				right: 60px;
+				text-align: right;
+				left: auto;
+			}
+		}
+
+	}
+}
+
+.page-numbers {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	float: left;
+	background-color: $brand-primary;
+	color: white;
+	line-height: 30px;
+	margin-right: 10px;
+
+	&:hover {
+		background-color: $text-color;
+		color: white;
+		text-decoration: none;
+	}
+
+	&.next {
+		width: 80px;
+	}
+
+	&.prev {
+		width: 80px;
+	}
+
+	&.current {
+		color: $text-color;
+		background-color: $gray-lighter;
+	}
+}
+
+
+
+.social-sidebar {
+	padding-bottom: 1em;
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			float: left;
+			margin: 0 10px 0 0;
+
+			span {
+				display: block;
+				width: 40px;
+				height: 40px;
+				background-color: $brand-primary;
+				text-align: center;
+				line-height: 40px;
+				transition: all .2s ease;
+
+				&:hover {
+					background-color: black;
+					transform: scale(1.1);
+				}
+
+				i {
+					color: white;
+
+				}
+			}
+
+			&.fb-einzeln {
+				span {
+					background-color: #0069b4;
+
+					&:hover {
+						background-color: black;
+					}
+				}
+			}
+			&.tw-einzeln {
+				span {
+					background-color: #50A2D4;
+
+					&:hover {
+						background-color: black;
+					}
+				}
+			}
+			&.gp-einzeln {
+				span {
+					background-color: #DF5138;
+
+					&:hover {
+						background-color: black;
+					}
+				}
+			}
+			&.xi-einzeln {
+				span {
+					background-color: #006464;
+
+					&:hover {
+						background-color: black;
+					}
+				}
+			}
+
+		}
+	}
+}

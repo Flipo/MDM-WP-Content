@@ -1,0 +1,137 @@
+@import "bootstrap/variables";
+$red: 	#9c1006;
+$green: #9da514;
+
+html {
+	background-color: white;
+
+}
+
+
+body.login {
+	background-color: white;
+	background-image: (radial-gradient(center, ellipse cover, rgba(254,255,255,1) 70%,rgba(237,237,237,1) 100%));
+}
+
+.login h1 a {
+	background-image: url('../img/logo-mdm.png');
+	background-image: none, url('../img/logo-mdm.svg');
+	background-repeat: no-repeat;
+	height: 75px;
+	background-size: auto;
+	background-position: 50%;
+	width: 100%;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+
+.wp-core-ui .button-primary {
+	background-color: $brand-primary;
+	border-color: transparent;
+	color: white;
+	border-radius: 0;
+	letter-spacing: 1pt;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+
+
+
+	&:hover {
+		background-color: black;
+		border-color: black;
+		color: white;
+		box-shadow: none;
+	}
+}
+
+#login {
+	padding-top: 80px;
+}
+
+.login form {
+	background: $gray-lighter;
+	border: none;
+	border-bottom: 4px solid $gray-light;
+	box-shadow: none;
+
+	label {
+		color: $text-color;
+	}
+}
+
+.login form .input, .login input[type="text"] {
+	background: #fff;
+	border: 1px solid #ccc;
+}
+
+.login #nav a, .login #backtoblog a {
+	color: darken(white,70%) !important;
+	font-size: 10px;
+
+	&:hover {
+		color: $brand-primary !important;
+	}
+}
+
+.login #nav {
+	padding: 1.5em 0;
+	margin: 0;
+	float: left;
+	font-size: .85em;
+	float: right;
+}
+
+.login #backtoblog {
+	padding: 1.5em 10px 1.5em 0;
+	margin: 0;
+	float: left;
+	font-size: .85em;
+	color: black;
+}
+
+.login label {
+	letter-spacing: 1pt;
+}
+
+.login .forgetmenot {
+	label {
+		font-family: sans-serif;
+		letter-spacing: 0;
+		font-size: .75em;
+	}
+}
+
+div.updated, .login .message {
+	background-color: $green;
+	border-color: darken($green,30%);
+	color: white;
+}
+
+div.error, .login #login_error {
+	background-color: $red;
+	border-color: darken($red,30%);
+	color: white;
+	border-top: 1px solid darken($red,30%);
+
+	strong {
+		display: inline;
+	}
+
+	a {
+		color: $brand-primary;
+		display: inline-block;
+		padding: 0 5px;
+
+		&:hover {
+			color: lighten($red,40%);
+		}
+	}
+
+	&:first-child {
+		border-top: none;
+	}
+}

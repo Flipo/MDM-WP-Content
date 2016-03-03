@@ -1,0 +1,307 @@
+
+.personen-container {
+	padding: 50px 0 0;
+}
+
+.person-item {
+	margin-bottom: 2em;
+
+	@include make-xs-column(12);
+
+
+	@media (min-width: $screen-sm-min) {
+		@include make-xs-column(6);
+		margin-bottom: 3.5em;
+		min-height: 475px;
+	}
+
+	@media (min-width: $screen-md-min) {
+		min-height: 500px;
+	}
+
+	@media (min-width: $screen-lg-min) {
+		@include make-xs-column(3);
+		min-height: 435px;
+	}
+
+	@media #{$ipad-landscape} {
+		@include make-xs-column(4);
+		min-height: 435px;
+	}
+}
+
+
+.person-img {
+	@include make-xs-column(12);
+	padding-right: 15px;
+	width: 100%;
+	height: auto;
+
+	@media (min-width: $screen-sm-min) {
+		@include make-xs-column(12);
+		padding-right: 15px;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+
+		@media (min-width: $screen-md-min) {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	span {
+		background-color: $gray-lighter;
+		position: relative;
+		display: block;
+
+/*
+		@media (min-width: $screen-xs-min) {
+			max-height: 62px;
+		}
+
+		@media (min-width: $screen-sm-min) {
+			max-height: 229px;
+		}
+
+		@media (min-width: $screen-md-min) {
+			max-height: 212px;
+		}
+
+		@media (min-width: $screen-lg-min) {
+			height: 179px;
+			width: 270px;
+		}
+*/
+	}
+}
+
+.person-name {
+	margin-bottom: -.5em;
+
+	h5 {
+		font-size: 1.2em;
+	}
+}
+
+.person-text {
+	@include make-xs-column(12);
+
+	@media (min-width: $screen-sm-min) {
+		@include make-xs-column(12);
+	}
+
+	> div {
+		padding: .25em 0 0;
+		font-size: .875em;
+	}
+
+	hr {
+		margin: .5em 0 .25em;
+	}
+}
+
+.person-lehrgebiet {
+	p {
+		line-height: 1.5em;
+	}
+}
+
+.person-kontakt {
+	span {
+		display: block;
+		padding:  0;
+	}
+
+	i {
+		float: left;
+		width: 25px;
+		line-height: 1em;
+		margin-top: 5px;
+	}
+
+
+}
+
+.lehrender-mehr-link {
+	padding-top: 0;
+	font-size: .875em;
+	display: block;
+}
+
+
+
+
+
+.alumni-container {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin: 0;
+}
+
+
+.alumni-item {
+	margin-bottom: 0;
+	overflow: hidden;
+
+	@include make-xs-column(6);
+	padding: 0;
+
+
+	@media (min-width: $screen-sm-min) {
+		width: 20%;
+		float: left;
+		padding: 0;
+	}
+
+	@media (min-width: $screen-md-min) {
+		width: 20%;
+		float: left;
+		padding: 0;
+	}
+
+	@media (min-width: $screen-lg-min) {
+		width: 12.5%;
+		float: left;
+		padding: 0;
+	}
+
+	@media #{$ipad-landscape} {
+		width: 20%;
+		float: left;
+		padding: 0;
+	}
+
+	.alumni-img {
+		span {
+
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.person-text   {
+		height: 20px;
+		margin-top: -20px;
+		margin-left: 0;
+		overflow: hidden;
+		background-color: white;
+		background: rgba(black,.4);
+		transition: all .2s ease;
+		padding: 0 25px;
+		font-size: .875em;
+		color: white;
+	}
+
+	&:hover {
+		cursor: help;
+
+		.person-text {
+			background: rgba(white,1);
+			height: 170px;
+			margin-top: -170px;
+			opacity: 1;
+			color: black;
+
+			> div {
+				padding: 0;
+			}
+		}
+
+		.person-name {
+			h5 {
+				margin: .5em 0;
+			}
+		}
+
+	}
+
+	.person-kontakt {
+		span {
+			display: block;
+			padding: 0;
+		}
+
+		i {
+			width: 17px;
+		}
+	}
+
+	.person-name {
+		h5 {
+			margin: 0;
+			font-size: 1em;
+		}
+	}
+}
+
+
+.lehrender-single-info {
+	padding: 1em 0;
+
+	aside {
+		padding: 0 0 1em;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+		}
+
+		.person-lehrgebiet {
+			padding-top: 1.5em;
+
+			h6 {
+				display: block;
+				font-weight: bold;
+				border-bottom: 1px solid $gray-lighter;
+				margin-top: 0;
+				margin-bottom: .5em;
+			}
+
+			@media (min-width: $screen-sm-min) {
+				padding-top: 0;
+			}
+		}
+
+		.person-masterabeit {
+			margin-top: 1.5em;
+			padding-top: 1.5em;
+
+			h6 {
+				display: block;
+				font-weight: bold;
+				border-bottom: 1px solid $gray-lighter;
+				margin-top: 0;
+				margin-bottom: .5em;
+			}
+
+			@media (min-width: $screen-sm-min) {
+				padding-top: 0;
+			}
+		}
+
+		.person-kontakt {
+			padding-top: 1em;
+
+			> h6 {
+				display: block;
+				font-weight: bold;
+				border-bottom: 1px solid $gray-lighter;
+				margin-bottom: .5em;
+			}
+
+			span {
+				padding: .25em 0;
+			}
+		}
+	}
+
+	main {
+
+	}
+
+}

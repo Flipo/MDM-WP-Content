@@ -1,0 +1,331 @@
+.termin-content {
+	@media (min-width: $screen-md-min) {
+		min-height: $sidebar-min-height;
+	}
+}
+
+.termine-container {
+	padding: 0 15px;
+}
+
+.termine-list {
+	.panel {
+		margin: 0;
+		box-shadow: none;
+		border: 1px solid $gray-lighter;
+		border-bottom: none;
+
+		&:last-child {
+			border-bottom: 1px solid $gray-lighter;
+		}
+
+		&:nth-child(even) {
+			.panel-heading {
+				background-color: $gray-lighter;
+			}
+		}
+	}
+
+	.panel-heading {
+		background-color: white;
+		padding: 0;
+		min-height: 50px;
+	}
+
+	.panel+.panel {
+		margin: 0;
+	}
+
+	.panel-title {
+
+		> div {
+			float: left;
+			font-size: .75em;
+			overflow: hidden;
+			padding: 10px 1em;
+			line-height: 1.5em;
+		}
+	}
+
+	.termin-icon {
+		width: 40px;
+		padding: 0 0 0 0 !important;
+		display: none;
+		text-align: center;
+		overflow: hidden;
+
+		@media (min-width: $screen-md-min) {
+			display: block;
+			width: 5%;
+		}
+
+		img {
+			width: 103%;
+		}
+	}
+
+	.termin-icon-text {
+		padding-top: 10px !important;
+	}
+
+	.termin-date {
+		width: 30%;
+		text-align: left;
+
+		@media (min-width: $screen-sm-min) {
+			width: 12%;
+		}
+
+		@media (min-width: $screen-md-min) {
+			width: 12%;
+		}
+	}
+
+	.termin-name {
+		width: 50%;
+		text-align: left;
+
+		@media (min-width: $screen-sm-min) {
+			width: 55%;
+		}
+
+		@media (min-width: $screen-md-min) {
+			width: 38%;
+		}
+	}
+
+	.termin-place {
+		width: 15%;
+		display: none;
+
+		@media (min-width: $screen-md-min) {
+			display: block;
+		}
+	}
+
+
+	.termin-type {
+		width: 20%;
+		display: none;
+
+		@media (min-width: $screen-sm-min) {
+			display: block;
+			width: 25%;
+		}
+
+		@media (min-width: $screen-md-min) {
+			width: 20%;
+		}
+
+	}
+
+	.termin-more {
+		text-align: center;
+		width: 20%;
+
+		@media (min-width: $screen-sm-min) {
+			width: 8%;
+		}
+
+		@media (min-width: $screen-md-min) {
+			width: 10%;
+		}
+	}
+}
+
+
+
+
+
+/* ---------------------------------------------------------- */
+
+
+
+
+.faq-list {
+	margin-top: 2em;
+	padding-top: 1em;
+	position: relative;
+
+	&:before {
+		position: absolute;
+		content: '';
+		left: 0;
+		right: 0;
+		top: -10px;
+		height: 4px;
+		background-image: url(../img/pattern2x.png);
+		background-repeat: repeat-x;
+		background-size: 4px 4px;
+	}
+
+
+	.panel {
+		box-shadow: none;
+	}
+
+	.panel-heading {
+		padding: 0;
+		box-shadow: none;
+
+		a {
+			font-weight: bold;
+			display: block;
+			padding: 10px 15px;
+
+			&:hover {
+				text-decoration: none;
+				background-color: darken($gray-lighter,3%);
+			}
+
+			i {
+				color: $brand-primary;
+				margin-right: 5px;
+
+				&:before {
+					content:"\f152";
+				}
+			}
+
+			&.active {
+				i {
+					&:before {
+						content:"\f150";
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+/* ---------------------------------------------------------- */
+
+
+
+.kontakt-form {
+	margin-top: 3em;
+
+
+	.kontakt-item {
+		margin-bottom: 2em;
+	}
+
+	h5 {
+		margin-bottom: 1.5em;
+		border-bottom: 1px solid $gray-lighter;
+	}
+
+	p {
+		overflow: hidden;
+		display: block;
+
+		&.submit-button {
+			margin-top: 2.5em;
+		}
+
+		label {
+			display: block;
+			float: none;
+			font-weight: normal;
+			width: 100%;
+
+			@media (min-width: $screen-sm-min) {
+				float: left;
+				width: 30%;
+			}
+		}
+
+		input[type="submit"] {
+			background-color: $gray-lighter;
+			color: $text-color;
+			border: none;
+			box-shadow: 0 3px 0 darken($gray-lighter,12%);
+			height: 45px;
+
+			&:hover {
+				background-color: darken($gray-lighter,8%);
+				box-shadow: 0 1px 0 darken($gray-lighter,12%);
+				transform: translateY(2px);
+			}
+
+		}
+
+		span {
+			display: block;
+			float: none;
+			width: 100%;
+
+			@media (min-width: $screen-sm-min) {
+				float: left;
+				width: 70%;
+			}
+
+			input, textarea {
+				width: 100%;
+				font-size: .875em;
+
+				&:focus {
+					box-shadow: none;
+					outline-color: $brand-primary;
+					outline-width: 2px;
+				}
+			}
+
+			&.captcha-img {
+				@media (min-width: $screen-sm-min) {
+					width: 10%
+				}
+			}
+
+			&.captcha-87 {
+				@media (min-width: $screen-sm-min) {
+					width: 60%
+				}
+			}
+
+		}
+	}
+
+}
+
+.link-container {
+	position: relative;
+	margin-top: 2em;
+
+	&:before {
+		position: absolute;
+		content: '';
+		left: 0;
+		right: 0;
+		top: -10px;
+		height: 4px;
+		background-image: url(../img/pattern2x.png);
+		background-repeat: repeat-x;
+		background-size: 4px 4px;
+	}
+}
+
+.link-category {
+	padding: .5em 0 .5em;
+	border-bottom: 1px solid $gray-lighter;
+
+	h3 {
+		margin-bottom: 1.5em;
+		text-transform: uppercase;
+	}
+}
+
+.link-item {
+	padding-bottom: 1.5em;
+
+	h4 {
+		font-size: 1em;
+	}
+
+	p {
+		font-size: .875em;
+		line-height: 1.5em;
+	}
+}
